@@ -8,14 +8,14 @@ public class AudioRecPullUp : MonoBehaviour
 
     private void Start()
     {
-        if (shown)
-        {
-            audioRec.SetActive(true);
-        }
-        if (!shown)
-        {
-            audioRec.SetActive(false);
-        }
+        //if (shown)
+        //{
+        //    audioRec.SetActive(true);
+        //}
+        //if (!shown)
+        //{
+        //    audioRec.SetActive(false);
+        //}
     }
 
     private void Update()

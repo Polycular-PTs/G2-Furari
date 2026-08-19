@@ -23,7 +23,7 @@ public class Chat : MonoBehaviour
 
     public void ShowAttachmentList()
     {
-        attachmentListActive = !attachmentListActive;
-        attachmentList.SetActive(!attachmentListActive);
+        //attachmentListActive = !attachmentListActive;
+        attachmentList.SetActive(!attachmentList.activeSelf);
     }
 }
