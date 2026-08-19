@@ -8,6 +8,7 @@ public class Friendshipbook : MonoBehaviour
     [SerializeField] private GameObject buttonToBook;
     [SerializeField] private GameObject blackScreen;
     [SerializeField] private GameObject infoText;
+    [SerializeField] private Animator bookAnim;
     [SerializeField] private Image roomImage;
     [SerializeField] private Sprite newRoomSprite;
     public List<GameObject> pageList;
@@ -24,21 +25,28 @@ public class Friendshipbook : MonoBehaviour
     public void OpenOrCloseFriendshipbook()
     {
         if (bookPickedUp)
-        { 
+        {
+
             if (bookPuzzle.activeSelf) { bookPuzzle.SetActive(false); blackScreen.SetActive(false); } else { bookPuzzle.SetActive(true); blackScreen.SetActive(true); }
         }
         else { ShowInfoText(); }
     }
     public void ShowInfoText()
     {
-        infoText.GetComponent<Animator>().SetTrigger("Play");
+          bookAnim.Play("wrongbirthday");
+    }
+
+    public void WiggleStammbaum()
+    {
+        infoText.GetComponent<Animator>().Play("wrongbirthday");
     }
 
     public void PickUpFriendshipbook()
     {
         ReturnFsbValue();
-        Destroy(buttonToBook);
-        ChangeRoomSprite();
+        bookAnim.Play("pickupbook");
+        //Destroy(buttonToBook);
+        //ChangeRoomSprite();
     }
 
     public void TurnPage()

@@ -54,8 +54,24 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             { rectTransform.SetParent(FSBParent); rectTransform.localPosition = fsbposition; EditText(new Vector2(260f, 0), 37); }
         }
         bool isFilled = StammbaumIsFull();
-        if (isFilled) { bool isRight = Evaluation(); Debug.Log("You Solution is " + isRight); if (isRight) { RoomManager roomManager = FindFirstObjectByType<RoomManager>(); roomManager.RoomCompleted(0); } }
+        if (isFilled) { bool isRight = Evaluation(); Debug.Log("You Solution is " + isRight); if (isRight) { Feedback(); RoomManager roomManager = FindFirstObjectByType<RoomManager>(); roomManager.RoomCompleted(0); } }
     }
+
+    private void Feedback()
+    {
+        print("Feedback");
+        Color colorFromHex;
+        ColorUtility.TryParseHtmlString("C5F1CC", out colorFromHex);
+
+        Color newColor = new Color(0.72f,1f,0.72f,1);
+
+        foreach (var item in fsbScript.fsbPhotos)
+        {
+            //print(item.name);
+            item.GetComponent<Image>().color = newColor;
+        }
+    }
+
     private void EditText(Vector2 position, int fontsize)
     {
         Transform child = rectTransform.GetChild(0);
