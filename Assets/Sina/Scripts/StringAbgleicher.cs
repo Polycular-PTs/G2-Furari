@@ -5,6 +5,7 @@ public class StringAbgleicher : MonoBehaviour
 {
     [SerializeField] private InputField inputField;
     [SerializeField] private string correctWord;
+    public bool useEasyMode = true;
 
     public Animator anim;
 
@@ -17,6 +18,21 @@ public class StringAbgleicher : MonoBehaviour
             anim.gameObject.SetActive(false);
         }
         else
+        {
+            if (useEasyMode)
+            {
+                if (Menu.easyMode)
+                {
+                    anim.Play("wrongbirthday");
+                }
+            }
+            
+        }
+    }
+
+    public void WiggleInEasyMode(Animator anim)
+    {
+        if (Menu.easyMode)
         {
             anim.Play("wrongbirthday");
         }

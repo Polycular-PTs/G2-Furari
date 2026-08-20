@@ -33,12 +33,18 @@ public class Friendshipbook : MonoBehaviour
     }
     public void ShowInfoText()
     {
-          bookAnim.Play("wrongbirthday");
+        if (Menu.easyMode)
+        {
+            bookAnim.Play("wrongbirthday");
+        }
     }
 
     public void WiggleStammbaum()
     {
-        infoText.GetComponent<Animator>().Play("wrongbirthday");
+        if (Menu.easyMode)
+        {
+            infoText.GetComponent<Animator>().Play("wrongbirthday");
+        }
     }
 
     public void PickUpFriendshipbook()
