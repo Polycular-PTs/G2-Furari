@@ -22,6 +22,17 @@ public class Send : MonoBehaviour
         }
     }
 
+    public void SendPrompt()
+    {
+        GameObject blankMessage = Instantiate(message, chatField.transform);
+        blankMessage.GetComponent<TextMeshProUGUI>().text = "........";
+        
+        GameObject newMessage = Instantiate(message, chatField.transform);
+        var x = newMessage.GetComponent<TextMeshProUGUI>();
+        x.text = "Tell me ALL you have learned so far and then finish your hacking!";
+        x.alignment = TextAlignmentOptions.Left;
+    }
+
     public void AttachmentSent(int index) 
     {
         GameObject newMessage = Instantiate(message, chatField.transform);

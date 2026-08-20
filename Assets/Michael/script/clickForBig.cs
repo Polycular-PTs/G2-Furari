@@ -8,7 +8,7 @@ public class clickForBig : MonoBehaviour
     void Start()
     {
         ResetBigObjectTransform(false);
-        animChat.Play("showChat");
+        //animChat.Play("showChat");
     }
 
     public void ResetBigObjectTransform(bool bigObjEnabled)
