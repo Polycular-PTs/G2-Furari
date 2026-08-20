@@ -13,6 +13,7 @@ public class Result : MonoBehaviour
     [SerializeField] private GameObject resultSlider;
     [SerializeField] private TextMeshProUGUI resultText;
 
+
     [Header("Score Text")]
     public string badScore;
     public string okScore;
@@ -53,7 +54,9 @@ public class Result : MonoBehaviour
             Debug.Log("else");
             ResultText();
             ResultSlider();
-        }  
+        }
+
+
     }
 
     private void ResultText()

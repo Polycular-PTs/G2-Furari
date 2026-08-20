@@ -11,6 +11,7 @@ public class Send : MonoBehaviour
     [SerializeField] private GameObject chatField;
 
     [SerializeField] private CheckAndAnswer checkAndAnswer;
+    public RectTransform scrollwindow;
 
     public void MessageSent()
     {
@@ -19,6 +20,8 @@ public class Send : MonoBehaviour
             GameObject newMessage = Instantiate(message, chatField.transform);
             newMessage.GetComponent<TextMeshProUGUI>().text = inputField.text;
             StartCoroutine(checkAndAnswer.CheckMessage(inputField.text));
+            inputField.text = "";
+            inputField.Select();
         }
     }
 
@@ -31,6 +34,7 @@ public class Send : MonoBehaviour
         var x = newMessage.GetComponent<TextMeshProUGUI>();
         x.text = "Tell me ALL you have learned so far and then finish your hacking!";
         x.alignment = TextAlignmentOptions.Left;
+        scrollwindow.anchoredPosition = new Vector2(0, scrollwindow.sizeDelta.y / 2);
     }
 
     public void AttachmentSent(int index) 

@@ -14,7 +14,7 @@ public class CheckAndAnswer : MonoBehaviour
 
     [Header("Attachments")]
     [SerializeField] private Attachments attachments;
-
+    public RectTransform scrollwindow;
 
     [Header("Answers")]
     public GameObject answerObject;
@@ -48,7 +48,9 @@ public class CheckAndAnswer : MonoBehaviour
         else
         {
             Answer(3);
-        }   
+        }
+
+        scrollwindow.anchoredPosition = new Vector2(0, scrollwindow.sizeDelta.y/2);
     }
 
     private void ListUpdate(string message, List<string> wordType)
