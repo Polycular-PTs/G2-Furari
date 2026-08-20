@@ -519,7 +519,7 @@ MonoBehaviour:
   - {fileID: 715020640}
   - {fileID: 2096196875}
   - {fileID: 1387146499}
-  roomIndex: 5
+  roomIndex: 4
   menu: {fileID: 1705528875}
   RoomCompletion: 0000000000
 --- !u!4 &124402297
@@ -1159,10 +1159,10 @@ RectTransform:
   - {fileID: 1354511733}
   m_Father: {fileID: 622240200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: -91.71125}
+  m_SizeDelta: {x: 560, y: 143.4225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &208082977
 MonoBehaviour:
@@ -1370,10 +1370,10 @@ RectTransform:
   - {fileID: 1894927326}
   m_Father: {fileID: 622240200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: -608.28876}
+  m_SizeDelta: {x: 560, y: 143.4225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &225121865
 MonoBehaviour:
@@ -8867,6 +8867,7 @@ GameObject:
   - component: {fileID: 1146313165}
   - component: {fileID: 1146313164}
   - component: {fileID: 1146313167}
+  - component: {fileID: 1146313168}
   m_Layer: 5
   m_Name: ShowChat
   m_TagString: Untagged
@@ -8932,7 +8933,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1146313165}
   m_OnClick:
     m_PersistentCalls:
@@ -8997,7 +8998,7 @@ Animator:
   m_GameObject: {fileID: 1146313162}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c3f1492dad61b4948acd6085f6b7af72, type: 2}
+  m_Controller: {fileID: 9100000, guid: db897107211561a46b219c83a9bffab5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9009,6 +9010,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!225 &1146313168
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146313162}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1146580965
 GameObject:
   m_ObjectHideFlags: 0
@@ -9761,10 +9774,10 @@ RectTransform:
   - {fileID: 878628142}
   m_Father: {fileID: 622240200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: -436.09625}
+  m_SizeDelta: {x: 560, y: 143.4225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1248111203
 MonoBehaviour:
@@ -9950,6 +9963,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1146313162}
+        m_TargetAssemblyTypeName: ExitButton, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -14082,7 +14107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1705528876
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15877,10 +15902,10 @@ RectTransform:
   - {fileID: 208451914}
   m_Father: {fileID: 622240200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: -263.90375}
+  m_SizeDelta: {x: 560, y: 143.4225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1949811660
 MonoBehaviour:
@@ -17165,6 +17190,8 @@ MonoBehaviour:
   nothingHereText: {fileID: 1591648648}
   roomManager: {fileID: 124402296}
   recManager: {fileID: 2584309303011895562}
+  notTriggered: 1
+  chatAnim: {fileID: 1146313167}
 --- !u!114 &2090176941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17434,6 +17461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   makeBigObj: {fileID: 4939931021067263505}
+  animChat: {fileID: 1146313167}
 --- !u!114 &2103936953
 MonoBehaviour:
   m_ObjectHideFlags: 0

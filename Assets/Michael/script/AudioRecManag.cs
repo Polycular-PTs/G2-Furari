@@ -54,6 +54,7 @@ public class AudioRecManag : MonoBehaviour
         {
             RecordingAudio(songrec_Clip, songrecDone, songrecSpr);
         }
+
     }
 
     void RecordingAudio(AudioClip audioClip, bool isRecorded, Sprite doneSpr)
@@ -76,10 +77,11 @@ public class AudioRecManag : MonoBehaviour
             isLoadingStarted = false;
             if(stuffedAnimalObj.activeInHierarchy)
                 stuffedDone = true;
-            if(birthdayCardObj.activeInHierarchy)
+            if (birthdayCardObj.activeInHierarchy)
                 birthdayDone = true;
-            if(songRecObj.activeInHierarchy)
+            if (songRecObj.activeInHierarchy)
                 songrecDone = true;
+
         }
     }
 

@@ -14,6 +14,9 @@ public class Attachments : MonoBehaviour
     [SerializeField] private RoomManager roomManager;
     [SerializeField] private AudioRecManag recManager;
 
+    public bool notTriggered = true;
+    public Animator chatAnim;
+
     private void Start()
     {
         anyFound = false;
@@ -37,6 +40,15 @@ public class Attachments : MonoBehaviour
             recManager.songrecDone = false;
         }
 
+        if ((attachmentsFound[0] ||
+            attachmentsFound[1] ||
+            attachmentsFound[2]) && notTriggered)
+        {
+            Debug.Log("All Found!");
+            notTriggered = false;
+            chatAnim.Play("showChat");
+
+        }
     }
 
 

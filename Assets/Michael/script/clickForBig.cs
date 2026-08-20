@@ -3,10 +3,12 @@ using UnityEngine;
 public class clickForBig : MonoBehaviour
 {
     [SerializeField] private GameObject makeBigObj;
+    public Animator animChat;
 
     void Start()
     {
         ResetBigObjectTransform(false);
+        animChat.Play("showChat");
     }
 
     public void ResetBigObjectTransform(bool bigObjEnabled)

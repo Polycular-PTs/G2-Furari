@@ -30,11 +30,4 @@ public class StringAbgleicher : MonoBehaviour
         }
     }
 
-    public void WiggleInEasyMode(Animator anim)
-    {
-        if (Menu.easyMode)
-        {
-            anim.Play("wrongbirthday");
-        }
-    }
 }
