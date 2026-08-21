@@ -32,7 +32,7 @@ public class ItemPullUp : MonoBehaviour
             bigImag.gameObject.SetActive(true);
             bigImag.gameObject.GetComponent<BigItem>().EnableDelayedInteraction();
             gameObject.SetActive(false);
-            exitButton.SetActive(true);
+            //exitButton.SetActive(true);
         }
     }
 

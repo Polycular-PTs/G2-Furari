@@ -31,7 +31,7 @@ public class BigItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             {
                 if (Input.GetMouseButton(0))
                 {
-                    ExitBigItemView();
+                    //ExitBigItemView();
                 }
             }
         }
@@ -58,7 +58,7 @@ public class BigItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         shouldStart = false;
         item.SetActive(true);
         audioRec.isRecordingFinished = false;
-        exitButton.SetActive(false);
+        //exitButton.SetActive(false);
         gameObject.SetActive(false);
     }
 }
