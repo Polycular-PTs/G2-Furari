@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
+using System.Linq;
 
 public class CheckAndAnswer : MonoBehaviour
 {
@@ -27,13 +29,13 @@ public class CheckAndAnswer : MonoBehaviour
         Debug.Log("hier");
         yield return new WaitForSeconds(responseTime);
 
-        if (essentialWords.Contains(message))
+        if (essentialWords.Contains(message, StringComparer.OrdinalIgnoreCase))
         {
             Answer(0);
             ListUpdate(message, essentialWords);
             Debug.Log("Essential Words: " + essentialWords.Count);
         }
-        else if (extraWords.Contains(message))
+        else if (extraWords.Contains(message, StringComparer.OrdinalIgnoreCase))
         {
             Answer(1); 
             ListUpdate(message, extraWords);
@@ -41,7 +43,7 @@ public class CheckAndAnswer : MonoBehaviour
             Debug.Log("Extra Words: " + extraWords.Count);
             Debug.Log("Found Extra Words:" + foundExtraWordsCount);
         }
-        else if (foundWords.Contains(message))
+        else if (foundWords.Contains(message, StringComparer.OrdinalIgnoreCase))
         {
             Answer(2);
         }

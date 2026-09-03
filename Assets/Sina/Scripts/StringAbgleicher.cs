@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class StringAbgleicher : MonoBehaviour
 
     public void InputSent()
     {
-        if (inputField.text == correctWord)
+        if (StringComparer.OrdinalIgnoreCase.Equals(inputField.text, correctWord))
         {
             RoomManager roomManager = FindFirstObjectByType<RoomManager>();
             roomManager.RoomCompleted(1);
